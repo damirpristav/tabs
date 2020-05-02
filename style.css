@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+  --primary-color: #009e6c;
+  --text-color: #444;
+  --border-color: #eee;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+  margin-bottom: 50px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.tabs-wrapper {
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.tabs-wrapper nav {
+  display: flex;
+}
+
+.tabs-wrapper nav a {
+  display: block;
+  color: var(--text-color);
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  border-bottom: 0;
+  background-color: var(--border-color);
+  margin-right: 5px;
+  position: relative;
+  transition: background-color .3s ease;
+}
+
+.tabs-wrapper nav a.active {
+  background-color: transparent;
+}
+
+.tabs-wrapper nav a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+  content: '';
+  transition: background-color .3s ease;
+}
+
+.tabs-wrapper nav a.active::after {
+  background-color: #fff;
+}
+
+.tabs {
+  border: 1px solid var(--border-color);
+  padding: 20px;
+}
+
+.tab {
+  display: none;
+}
+
+.tab:first-child {
+  display: block;
+}
